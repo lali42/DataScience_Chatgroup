@@ -38,33 +38,35 @@
     body{
       background-color: #252525;
     }
-
+    
     p{
       font-size: 20px;
     }
 
+    hr{
+      width:40%;
+      border-color: white;
+    }
+
+    button{
+      margin-left: 1000px;
+    }
 
 </style>
 
 
 <body>
+    <br><br>
+    <center><h1 style="font-size: 50px;color:white;">TEST TEXT TYPE</h1></center>
+    <hr>
     <br>
-    <center><h1 style="color: white;">TEST TEXT TYPE</h1></center>
     <div class="container">
         <form method="POST" action="" class="shadow-lg p-3 mb-5 bg-white rounded">
             {% csrf_token %}
             <div class="form-group">
-                <input class="form-control" type="text" name="chat" required placeholder="Text..">
+                <center><input class="form-control" type="text" name="chat" required placeholder="Text.."></center>
             </div>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
             <button type="submit" class="btn btn-warning">Enter</button>
             <h1>{{ label }}</h1>
         </form>
@@ -75,55 +77,63 @@
 
     <div class="card-deck">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="card">
-          <img id="img1" class="card-img-top" src="https://wallpaperaccess.com/full/1762020.jpg" alt="comp.os.ms-windows.misc">
+        <div id="img1" class="card">
+          <img class="card-img-top" src="https://wallpaperaccess.com/full/1762020.jpg" alt="comp.os.ms-windows.misc">
           <div class="card-body">
             <h4 class="card-title">Computer OS microsoft windows</h4>
-            <p id="p1" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p id="p1" class="card-text">&nbsp;&nbsp; I am looking for some bar code fonts especially code 3 of 9. Did anybody know  any ftp sites or BBS that I can download these types of fonts? 
+              Please email to me if you have any info.  <br>Thanks!</p>
           </div>
           <div class="card-footer">
             <small class="text-muted">Exaample computer OS microsoft windows</small>
           </div>
         </div>
 
-        <div class="card">
-          <img id="img2" class="card-img-top" src="https://http2.mlstatic.com/razer-chroma-hdk-development-kit-led-na-cpu-D_NQ_NP_845083-MLB26428499053_112017-F.jpg" alt="comp.sys.ibm.pc.hardware">
+        <div id="img2" class="card">
+          <img class="card-img-top" src="https://http2.mlstatic.com/razer-chroma-hdk-development-kit-led-na-cpu-D_NQ_NP_845083-MLB26428499053_112017-F.jpg" alt="comp.sys.ibm.pc.hardware">
           <div class="card-body">
             <h4 class="card-title">Computer system IBM PC hardware</h4>
-            <p id="p2" class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p id="p2" class="card-text">&nbsp;&nbsp;   There is a benchmark program called COMPTEST said CYRIX CPUs have a bug so they cannot run the program. Also may be NeXTSTEP 486?
+              <br> regards,</p>
           </div>
           <div class="card-footer">
             <small class="text-muted">Exaample Computer system IBM PC hardware</small>
           </div>
         </div>
 
-        <div class="card">
-          <img id="img3" class="card-img-top" src="https://uploads-ssl.webflow.com/5bc276c9ccad94073c6ce0c4/5bc276c9ccad9468916ce290_iMac-Pro.jpg" alt="comp.sys.mac.hardware">
+        <div id="img3" class="card">
+          <img class="card-img-top" src="https://uploads-ssl.webflow.com/5bc276c9ccad94073c6ce0c4/5bc276c9ccad9468916ce290_iMac-Pro.jpg" alt="comp.sys.mac.hardware">
           <div class="card-body">
             <h4 class="card-title">Computer system Mac hardware</h4>
-            <p id="p3" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p id="p3" class="card-text">&nbsp;&nbsp; Could someone direct me to information on SCSI performance for each Mac? <br>
+              (Max throughput, etc.)
+              
+              <br>
+              Kurt Tiedtkebr
+              <br>
+              ktiedtke@jarthur.claremont.edu</p>
           </div>
           <div class="card-footer">
             <small class="text-muted">Exaample Computer system Mac hardware</small>
           </div>
         </div>
 
-        <div class="card">
-            <img id="img4" class="card-img-top" src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/triumph-speed-twin_660_042519033454.jpg" alt="rec.motorcycles">
+        <div id="img4" class="card">
+            <img class="card-img-top" src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/triumph-speed-twin_660_042519033454.jpg" alt="rec.motorcycles">
             <div class="card-body">
               <h4 class="card-title">Motorcycles</h4>
-              <p id="p4" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p id="p4" class="card-text">&nbsp;&nbsp; Animal Rights people have been know to do that to other "Bike riding dogs.cats and Racoons.</p>
             </div>
             <div class="card-footer">
               <small class="text-muted">Exaample Motorcycles</small>
             </div>
         </div>
 
-        <div class="card">
-            <img id="img5" class="card-img-top" src="https://i.imgur.com/oshb83t.jpg" alt="sci.electronics">
+        <div id="img5" class="card">
+            <img class="card-img-top" src="https://i.imgur.com/oshb83t.jpg" alt="sci.electronics">
             <div class="card-body">
               <h4 class="card-title">Science Electronics</h4>
-              <p id="p5" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p id="p5" class="card-text">&nbsp;&nbsp; Doesn't Motorola AMCU have something on the BBS yet? (512-891-3733)</p>
             </div>
             <div class="card-footer">
               <small class="text-muted">Exaample Science Electronics</small>
