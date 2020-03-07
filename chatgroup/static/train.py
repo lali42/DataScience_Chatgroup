@@ -5,7 +5,7 @@ from sklearn.pipeline import make_pipeline
 from joblib import dump
 
 data = fetch_20newsgroups()
-categories = ['comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware','comp.sys.mac.hardware','rec.sport.baseball','misc.forsale']
+categories = ['comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware','comp.sys.mac.hardware','rec.motorcycles','sci.electronics']
 train = fetch_20newsgroups(subset='train', categories=categories)
 test = fetch_20newsgroups(subset='test', categories=categories)
 model = make_pipeline(TfidfVectorizer(), MultinomialNB())
@@ -17,6 +17,6 @@ corrects = [ 1 for i in range(n) if test.target[i] == labels[i] ]
 print('บทสนทนาทั้งหมด', n , 'ข้อความ')
 print('ข้อมูลที่ตอบถูก',sum(corrects) , 'ข้อความ')
 print('ข้อมูลความแม่นยำ : ',sum(corrects)*100/n , '%')
-# print(data.target_names)
+print(data.target_names)
 
 dump(model, 'chatgroup.model')

@@ -24,7 +24,7 @@
         border-radius: 50px;
         font-size: 25px;
         background-color: white;
-        background-image: url('chatgroup\static\image\text.png');
+        background-image: url('https://www.w3schools.com/css/searchicon.png');
         background-position: 10px 10px; 
         background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
@@ -32,15 +32,15 @@
     }
 
     input[type=text]:focus {
-        width: 100%;
+      width: 100%;
     }
 
     body{
-        background-color: #7b8d8e;
+      background-color: #252525;
     }
 
     p{
-        font-size: 25px;
+      font-size: 20px;
     }
 
 
@@ -48,9 +48,8 @@
 
 
 <body>
-
     <br>
-    <center><h1>TEST TEXT TYPE</h1></center>
+    <center><h1 style="color: white;">TEST TEXT TYPE</h1></center>
     <div class="container">
         <form method="POST" action="" class="shadow-lg p-3 mb-5 bg-white rounded">
             {% csrf_token %}
@@ -77,63 +76,61 @@
     <div class="card-deck">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img id="img1" class="card-img-top" src="https://wallpaperaccess.com/full/1762020.jpg" alt="comp.os.ms-windows.misc">
           <div class="card-body">
-            <h3 class="card-title">Card title</h3>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h4 class="card-title">Computer OS microsoft windows</h4>
+            <p id="p1" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Exaample computer OS microsoft windows</small>
           </div>
         </div>
 
         <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img id="img2" class="card-img-top" src="https://http2.mlstatic.com/razer-chroma-hdk-development-kit-led-na-cpu-D_NQ_NP_845083-MLB26428499053_112017-F.jpg" alt="comp.sys.ibm.pc.hardware">
           <div class="card-body">
-            <h3 class="card-title">Card title</h3>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <h4 class="card-title">Computer system IBM PC hardware</h4>
+            <p id="p2" class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Exaample Computer system IBM PC hardware</small>
           </div>
         </div>
 
         <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <img id="img3" class="card-img-top" src="https://uploads-ssl.webflow.com/5bc276c9ccad94073c6ce0c4/5bc276c9ccad9468916ce290_iMac-Pro.jpg" alt="comp.sys.mac.hardware">
           <div class="card-body">
-            <h3 class="card-title">Card title</h3>
+            <h4 class="card-title">Computer system Mac hardware</h4>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+          <div id="p3" class="card-footer">
+            <small class="text-muted">Exaample Computer system Mac hardware</small>
           </div>
         </div>
 
         <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img id="img4" class="card-img-top" src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/triumph-speed-twin_660_042519033454.jpg" alt="rec.motorcycles">
             <div class="card-body">
-              <h3 class="card-title">Card title</h3>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <h4 class="card-title">Motorcycles</h4>
+              <p id="p4" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">Exaample Motorcycles</small>
             </div>
         </div>
 
         <div class="card">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img id="img5" class="card-img-top" src="https://i.imgur.com/oshb83t.jpg" alt="sci.electronics">
             <div class="card-body">
-              <h3 class="card-title">Card title</h3>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <h4 class="card-title">Science Electronics</h4>
+              <p id="p5" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">Exaample Science Electronics</small>
             </div>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
-
-    
 
 
 
@@ -146,6 +143,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('p').hide("slow");
+        $('.card-img-top').mouseleave(function(){
+          $('p').hide("slow");
+        });
+        $('.card-img-top').mouseenter(function(){
+          $('p').show("slow");
+        });
+      });
+    </script>
+
 </body>
 
 </html>
