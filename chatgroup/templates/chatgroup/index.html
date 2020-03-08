@@ -32,11 +32,11 @@
     }
 
     input[type=text]:focus {
-      width: 100%;
+      width: 90%;
     }
 
     body{
-      background-color: #252525;
+      background-image: linear-gradient(to right, rgb(36, 36, 36) , rgb(29, 37, 37), rgb(40, 88, 100));
     }
     
     p{
@@ -50,6 +50,12 @@
 
     button{
       margin-left: 1000px;
+    }
+
+    .card{
+      top: 0px;
+      width: 21rem;
+      margin: 15px;
     }
 
 </style>
@@ -75,8 +81,9 @@
 
     
 
-    <div class="card-deck">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <center><table>
+
+      <th>
         <div id="img1" class="card">
           <img class="card-img-top" src="https://wallpaperaccess.com/full/1762020.jpg" alt="comp.os.ms-windows.misc">
           <div class="card-body">
@@ -87,8 +94,9 @@
           <div class="card-footer">
             <small class="text-muted">Exaample computer OS microsoft windows</small>
           </div>
-        </div>
+        </div></th>
 
+        <th>
         <div id="img2" class="card">
           <img class="card-img-top" src="https://http2.mlstatic.com/razer-chroma-hdk-development-kit-led-na-cpu-D_NQ_NP_845083-MLB26428499053_112017-F.jpg" alt="comp.sys.ibm.pc.hardware">
           <div class="card-body">
@@ -99,8 +107,9 @@
           <div class="card-footer">
             <small class="text-muted">Exaample Computer system IBM PC hardware</small>
           </div>
-        </div>
+        </div></th>
 
+        <th>
         <div id="img3" class="card">
           <img class="card-img-top" src="https://uploads-ssl.webflow.com/5bc276c9ccad94073c6ce0c4/5bc276c9ccad9468916ce290_iMac-Pro.jpg" alt="comp.sys.mac.hardware">
           <div class="card-body">
@@ -116,8 +125,9 @@
           <div class="card-footer">
             <small class="text-muted">Exaample Computer system Mac hardware</small>
           </div>
-        </div>
+        </div></th>
 
+      <th>
         <div id="img4" class="card">
             <img class="card-img-top" src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/triumph-speed-twin_660_042519033454.jpg" alt="rec.motorcycles">
             <div class="card-body">
@@ -127,8 +137,9 @@
             <div class="card-footer">
               <small class="text-muted">Exaample Motorcycles</small>
             </div>
-        </div>
+        </div></th>
 
+        <th>
         <div id="img5" class="card">
             <img class="card-img-top" src="https://i.imgur.com/oshb83t.jpg" alt="sci.electronics">
             <div class="card-body">
@@ -140,8 +151,12 @@
             </div>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
+      </th>
 
+    </table></center>
+    <br>
+    <br>
+    <hr>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -156,40 +171,40 @@
 
     <script>
       $(document).ready(function(){
-        $('p').hide("slow");
+        $('p').hide();
         $('#img1').mouseleave(function(){
-          $('#p1').hide("slow");
+          $('#p1').hide(1000);
         });
         $('#img1').mouseenter(function(){
-          $('#p1').show("slow");
+          $('#p1').show(1000);
         });
 
         $('#img2').mouseleave(function(){
-          $('#p2').hide("slow");
+          $('#p2').hide(1000);
         });
         $('#img2').mouseenter(function(){
-          $('#p2').show("slow");
+          $('#p2').show(1000);
         });
 
         $('#img3').mouseleave(function(){
-          $('#p3').hide("slow");
+          $('#p3').hide(1000);
         });
         $('#img3').mouseenter(function(){
-          $('#p3').show("slow");
+          $('#p3').show(1000);
         });
 
         $('#img4').mouseleave(function(){
-          $('#p4').hide("slow");
+          $('#p4').hide(1000);
         });
         $('#img4').mouseenter(function(){
-          $('#p4').show("slow");
+          $('#p4').show(1000);
         });
 
         $('#img5').mouseleave(function(){
-          $('#p5').hide("slow");
+          $('#p5').hide(1000);
         });
         $('#img5').mouseenter(function(){
-          $('#p5').show("slow");
+          $('#p5').show(1000);
         });
       });
     </script>
