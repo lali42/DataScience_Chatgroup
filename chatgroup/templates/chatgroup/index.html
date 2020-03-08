@@ -7,14 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>DataScience</title>
     <link rel="shortcut icon" href="{% static 'images/DataScience.svg' %}" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <style>
 
-    h1,h2,h3,h4,h5,p,input,button,small{
-        font-family: 'Circular';
+    body,h1,h2,h3,h4,h5,input,button,small{
+      font-family: "Raleway", sans-serif
     }
 
     input[type=text] {
@@ -22,7 +25,7 @@
         box-sizing: border-box;
         border: 2px solid #ccc;
         border-radius: 50px;
-        font-size: 25px;
+        font-size: 20px;
         background-color: white;
         background-image: url('https://www.w3schools.com/css/searchicon.png');
         background-position: 10px 10px; 
@@ -35,14 +38,10 @@
       width: 90%;
     }
 
-    body{
+    header{
       background-image: linear-gradient(to right, rgb(36, 36, 36) , rgb(29, 37, 37), rgb(40, 88, 100));
     }
     
-    p{
-      font-size: 20px;
-    }
-
     hr{
       width:40%;
       border-color: white;
@@ -50,6 +49,8 @@
 
     button{
       margin-left: 1000px;
+      border-radius: 50px;
+      
     }
 
     .card{
@@ -58,31 +59,178 @@
       margin: 15px;
     }
 
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+    .w3-quarter{
+        width: 375px;
+    }
+
+    .bg{
+      background-color: rgba(31, 54, 59, 0.548);
+    }
+
 </style>
 
 
 <body>
-    <br><br>
-    <center><h1 style="font-size: 50px;color:white;">TEST TEXT TYPE</h1></center>
-    <hr>
+
+
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">Data Science</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#group" class="w3-bar-item w3-button">GROUP</a>
+        <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT ME</a>
+        <a href="#photo" class="w3-bar-item w3-button"><i class="fa fa-photo"></i> PHOTO</a>
+        <a href="#exam" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> EXAMPLE</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#group" onclick="w3_close()" class="w3-bar-item w3-button">GROUP</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+    <a href="#photo" onclick="w3_close()" class="w3-bar-item w3-button">PHOTO</a>
+    <a href="#exam" onclick="w3_close()" class="w3-bar-item w3-button">EXAMPLE</a>
+  </nav>
+
+  <!-- Home -->
+  <header id="home">
+    <br><br><br><br><br><br><br><br><br>
+    <center><h2 style="font-size: 40px;color:white;">TEST TEXT TYPE</h2></center>
+    <center><hr></center>
     <br>
-    <div class="container">
+    <div class="container w3-jumbo w3-animate-top">
         <form method="POST" action="" class="shadow-lg p-3 mb-5 bg-white rounded">
             {% csrf_token %}
             <div class="form-group">
                 <center><input class="form-control" type="text" name="chat" required placeholder="Text.."></center>
             </div>
 
-            <button type="submit" class="btn btn-warning">Enter</button>
-            <h1>{{ label }}</h1>
+            <button type="submit" class="btn btn-warning" style="border-radius:50px;">Enter</button>
+            <h3>Target : {{ label }}</h3>
+            <h3>Accuracy : {{ corrects1 }}%</h3>
         </form>
     </div>
-    <br>
+    <br><br><br><br><br><br>
+  </header>
+
+
+
+    <!-- Group -->
+    <div class="w3-container" style="padding:128px 16px" id="group">
+      <h3 class="w3-center">ABOUT THE GROUP</h3>
+      <h5 class="w3-center">Key features of our company</h5>
+      <div class="row w3-center" style="margin-top:64px">
+
+
+          <div  class="w3-quarter">
+            <i class="w3-margin-bottom w3-jumbo w3-center"> <img src="https://image.flaticon.com/icons/svg/732/732076.svg" style="width: 55px;" alt="windows"> </i>
+            <h4>Microsoft windows</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6>
+          </div>      
+
+          <div  class="w3-quarter">
+            <i class="w3-margin-bottom w3-jumbo"> <img src="https://image.flaticon.com/icons/svg/16/16817.svg" style="width: 55px;" alt="windows"> </i>
+            <h4>IBM PC hardware</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6>
+          </div>
+
+          <div class="w3-quarter">
+            <i class="w3-margin-bottom w3-jumbo"> <img src="https://image.flaticon.com/icons/svg/493/493955.svg" style="width: 55px;" alt="windows"> </i>
+            <h4>Mac hardware</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6>
+          </div>
+
+          <div class="w3-quarter">
+            <i class="w3-margin-bottom w3-jumbo"> <img src="https://image.flaticon.com/icons/svg/2340/2340405.svg" style="width: 55px;" alt="windows"> </i>
+            <h4>Motorcycles</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6>
+          </div>
+
+        
+          <div class="w3-quarter">
+            <i class="w3-margin-bottom w3-jumbo"> <img src="https://image.flaticon.com/icons/svg/2644/2644491.svg" style="width: 55px;" alt="windows"> </i>
+            <h4>Electronics</h4>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</h6>
+          </div>
+        </div>
+    </div>
+
+    <!-- About ME-->
+    <div class="w3-container bg" style="padding:72px 100px" id="about">
+      <div class="w3-row-padding">
+        <div class="w3-col m6" style="padding:170px 0px">
+          <h2 style="color:white">About Me.</h2>
+          <h4 style="color:white">My name is Lali. Nicname is Oum.<br>In my spare time, I enjoy playing games as everyone plays it in my friends. <br>I enjoy my responsibilities.</h4>
+        </div>
+        <div class="w3-col m6">
+          <img class="w3-image w3-round-large" src="https://cf.shopee.co.th/file/054906c7fd2973b5aadd8f17ae8ccecd" alt="Profile" width="500" height="500">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Photo -->
+    <div class="w3-container" style="padding:128px 16px" id="photo">
+      <h2 class="w3-center">PHOTO ABOUT GROUP</h2>
+      <h4 class="w3-center w3-large">Sample photo of groups</h4>
+
+      <div class="w3-row-padding" style="margin-top:64px">
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Computer OS microsoft windows">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-section">
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+        </div>
+        <div class="w3-col l3 m6">
+          <img src="https://wallpaperaccess.com/full/1762020.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <h4 id="caption" class="w3-opacity w3-large"></h4>
+      </div>
+    </div>
 
     
 
-    <center><table>
-
+    <center><table id="exam">
       <th>
         <div id="img1" class="card">
           <img class="card-img-top" src="https://wallpaperaccess.com/full/1762020.jpg" alt="comp.os.ms-windows.misc">
@@ -92,7 +240,7 @@
               Please email to me if you have any info.  <br>Thanks!</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Exaample computer OS microsoft windows</small>
+            <small class="text-muted">Example computer OS microsoft windows</small>
           </div>
         </div></th>
 
@@ -105,7 +253,7 @@
               <br> regards,</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Exaample Computer system IBM PC hardware</small>
+            <small class="text-muted">Example Computer system IBM PC hardware</small>
           </div>
         </div></th>
 
@@ -123,7 +271,7 @@
               ktiedtke@jarthur.claremont.edu</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Exaample Computer system Mac hardware</small>
+            <small class="text-muted">Example Computer system Mac hardware</small>
           </div>
         </div></th>
 
@@ -135,7 +283,7 @@
               <p id="p4" class="card-text">&nbsp;&nbsp; Animal Rights people have been know to do that to other "Bike riding dogs.cats and Racoons.</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Exaample Motorcycles</small>
+              <small class="text-muted">Example Motorcycles</small>
             </div>
         </div></th>
 
@@ -147,17 +295,27 @@
               <p id="p5" class="card-text">&nbsp;&nbsp; Doesn't Motorola AMCU have something on the BBS yet? (512-891-3733)</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Exaample Science Electronics</small>
+              <small class="text-muted">Example Science Electronics</small>
             </div>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </th>
 
     </table></center>
-    <br>
-    <br>
-    <hr>
+    <br><br>
 
+    <footer class="w3-center w3-black w3-padding-64">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div>
+      <p>BY LALI <a href="#about" title="W3.CSS" target="_blank" class="w3-hover-text-green">LALI</a></p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -207,7 +365,33 @@
           $('#p5').show(1000);
         });
       });
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+        } else {
+          mySidebar.style.display = 'block';
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+      }
     </script>
+
 
 </body>
 
